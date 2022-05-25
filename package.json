@@ -1,0 +1,24 @@
+{
+  "name": "infinite-scroll-gallery",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "start": "parcel ./src/index.html",
+    "build": "parcel build --no-source-maps --dist-dir build ./src/index.html"
+  },
+  "keywords": [
+    "Infinite scroll",
+    "Unsplash",
+    "React"
+  ],
+  "author": "saurabh verma",
+  "license": "ISC",
+  "dependencies": {
+    "kursor": "^0.1.6",
+    "parcel": "^2.5.0"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "process": "^0.11.10"
+  }
+}
