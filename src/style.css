@@ -14,14 +14,18 @@ body {
 #root.hide {
   display: none;
 }
-.image-grid {
-  display: grid;
-  grid-gap: 30px;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-auto-rows: minmax(100px, 500px);
-}
-.image-item:nth-child(5n + 1) {
-  grid-column-end: span 2;
+
+@media screen and (min-width: 650px) {
+  .image-grid {
+    margin-top: 50px;
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-auto-rows: minmax(200px, 500px);
+  }
+  .image-item:nth-child(5n + 1) {
+    grid-column-end: span 2;
+  }
 }
 
 img {

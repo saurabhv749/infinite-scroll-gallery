@@ -1,21 +1,19 @@
 import "./style.css";
-import kursor from "kursor";
-import "kursor/dist/kursor.css";
 
 const imgGrid = document.querySelector(".image-grid");
 const availableImages = 64,
+  gridMarginTop = 50,
   fileExt = ".jpg",
   filePrefix = "random_img";
 const store =
   "https://firebasestorage.googleapis.com/v0/b/infinitegallery-f9fac.appspot.com/o/";
 let loading = false;
-
 function calculateDist(e) {
   let { bottom } = imgGrid.getBoundingClientRect();
 
   let { clientHeight } = document.documentElement;
 
-  if ((Math.floor(bottom) === clientHeight) & !loading) {
+  if ((Math.floor(bottom) - 30 - gridMarginTop <= clientHeight) & !loading) {
     fetchImages();
   }
 }
@@ -56,9 +54,4 @@ const fetchImages = (count = 10) => {
 
 (() => {
   fetchImages();
-
-  new kursor({
-    // type: 5,
-    removeDefaultCursor: true,
-  });
 })();
